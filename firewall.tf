@@ -33,4 +33,10 @@ resource "digitalocean_firewall" "terraform-firewall" {
     port_range            = "443"
     destination_addresses = ["0.0.0.0/0", "::/0"]
   }
+
+  outbound_rule {
+    protocol              = "tcp"
+    port_range            = "21"
+    destination_addresses = ["0.0.0.0/0", "::/0"]
+  }
 }
