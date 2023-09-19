@@ -16,6 +16,6 @@ resource "digitalocean_project_resources" "terraform-project-resources" {
 }
 
 resource "digitalocean_project_resources" "terraform-project-resources-lb" {
-  project = digitalocean_project.terraform-project.id
+  project   = digitalocean_project.terraform-project.id
   resources = [digitalocean_loadbalancer.tf-lb-1.urn]
 }
