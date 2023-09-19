@@ -7,6 +7,7 @@ A short example of using Terraform with DigitalOcean.
         - This script will create a single user intended to be used with Ansible
     - A VPC
     - A project
+    - A load balancer that is associated with the Droplets
     - A tag, instantly associated with the Droplets
     - A firewall with basic rules to allow inbound SSH originating from a specified IP, as well as outbound traffic to allow packages to be updated via APT
 # Setup and Usage
