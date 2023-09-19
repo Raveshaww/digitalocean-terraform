@@ -1,3 +1,4 @@
+[![lint](https://github.com/Raveshaww/digitalocean-terraform/actions/workflows/lint.yml/badge.svg)](https://github.com/Raveshaww/digitalocean-terraform/actions/workflows/lint.yml)
 # DigitalOcean Terraform Example
 A short example of using Terraform with DigitalOcean.
 # Features
