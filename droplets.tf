@@ -1,8 +1,9 @@
-resource "digitalocean_droplet" "terraform-droplet-1" {
+resource "digitalocean_droplet" "terraform-droplets" {
+  count     = 2
   image     = var.droplet_image
-  name      = "terraform-droplet-1"
-  region    = digitalocean_vpc.terraform-vpc.region
-  size      = "s-1vcpu-512mb-10gb"
+  name      = "terraform-droplet-${count.index}"
+  region    = var.do_region
+  size      = var.do_droplet_size
   ssh_keys  = [var.ssh_key_id]
   vpc_uuid  = digitalocean_vpc.terraform-vpc.id
   tags      = [digitalocean_tag.terraform.id]

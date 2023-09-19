@@ -2,7 +2,7 @@
 A short example of using Terraform with DigitalOcean.
 # Features
 - This will create the following:
-    - One Droplet (DigitalOcean's term for a virtual machine) configured by a basic cloud-init script
+    - Several Droplets (DigitalOcean's term for a virtual machine) configured by a basic cloud-init script
         - This script will create a single user intended to be used with Ansible
     - A VPC
     - A project

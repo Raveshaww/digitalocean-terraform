@@ -1,12 +1,18 @@
 resource "digitalocean_firewall" "terraform-firewall" {
   name = "terraform-firewall"
 
-  droplet_ids = [digitalocean_droplet.terraform-droplet-1.id]
+  tags = [digitalocean_tag.terraform.id]
 
   inbound_rule {
     protocol         = "tcp"
     port_range       = "22"
     source_addresses = [var.home_ip]
+  }
+
+  inbound_rule {
+    protocol         = "tcp"
+    port_range       = "80"
+    source_addresses = ["0.0.0.0/0", "::/0"]
   }
 
   outbound_rule {

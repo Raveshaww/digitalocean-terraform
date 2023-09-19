@@ -18,3 +18,15 @@ variable "droplet_image" {
   description = "The image you would like to use in your Droplets"
   default     = "ubuntu-22-04-x64"
 }
+
+variable "do_region" {
+  type        = string
+  description = "The region you would like your resources to be in"
+  default     = "sfo3"
+}
+
+variable "do_droplet_size" {
+  type        = string
+  description = "The size you would like your droplets to be"
+  default     = "s-1vcpu-512mb-10gb"
+}
